@@ -1,7 +1,15 @@
 
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:untitled5/splesh.dart';
 import 'package:flutter/material.dart';
-void main() {
+
+import 'firebase_options.dart';
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform,
+  // );
   runApp( MyApp());
 }
 
@@ -70,38 +78,50 @@ class _MyHomePageState extends State<MyHomePage> {
                       SizedBox(
                         height: 11,
                       ),
-                      TextField(
-                        controller: wtc,
-                        decoration: InputDecoration(
-                          label: Center(child: Text("Enter your weight",style: TextStyle(fontSize: 20),)),
-                          prefix: Icon(Icons.line_weight),
-                        ),
-                        keyboardType: TextInputType.number,
+                      Container(
+                        width: kIsWeb ? 300.0 : 400.0,
+                        child: TextField(
+                          controller: wtc,
+                          textAlign: TextAlign.center,
+                          decoration: InputDecoration(
+                            label: Center(child: Text("Enter your weight",style: TextStyle(fontSize: 20),)),
+                            prefix: Icon(Icons.line_weight),
+                          ),
+                          keyboardType: TextInputType.number,
 
+                        ),
                       ),
                       SizedBox(
                         height: 11,
                       ),
-                      TextField(
-                        controller: htc,
-                        decoration: InputDecoration(
-                          label: Center(child: Text("Enter your height(inFeet)",style: TextStyle(fontSize: 20),)),
-                          prefix: Icon(Icons.height),
+                      Container(
+                        width: kIsWeb ? 300.0 : 400.0,
+                        child: TextField(
+                          textAlign: TextAlign.center,
+                          controller: htc,
+                          decoration: InputDecoration(
+                            label: Center(child: Text("Enter your height(inFeet)",style: TextStyle(fontSize: 20),)),
+                            prefix: Icon(Icons.height),
+                          ),
+                          keyboardType: TextInputType.number,
                         ),
-                        keyboardType: TextInputType.number,
                       ),
                       SizedBox(
                         height: 11,
                       ),
-                      TextField(
-                        controller: inc,
-                        decoration: InputDecoration(
-                          label:
-                          Center(child: Text("Enter your weight(inInches)",style: TextStyle(fontSize: 20),)),
+                      Container(
+                        width: kIsWeb ? 300.0 : 400.0,
+                        child: TextField(
+                          controller: inc,
+                          textAlign: TextAlign.center,
+                          decoration: InputDecoration(
+                            label:
+                            Center(child: Text("Enter your height(inInches)",style: TextStyle(fontSize: 20),)),
 
-                          prefix: Icon(Icons.height),
+                            prefix: Icon(Icons.height),
+                          ),
+                          keyboardType: TextInputType.number,
                         ),
-                        keyboardType: TextInputType.number,
                       ),
                       SizedBox(
                         height: 20,

@@ -38,6 +38,7 @@ class _spleshState extends State<splesh> {
           firstChild: Container(
             height: 600,
             width: 600,
+            // color: Colors.red,
           ),
           secondChild: Image.asset('assets/bmi.jpg'),
           crossFadeState: isfirst ? CrossFadeState.showFirst:CrossFadeState.showSecond,

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "562291678189",
+    "project_id": "bmll-c3cbe",
+    "storage_bucket": "bmll-c3cbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562291678189:android:d4ab347b5e5a87e04fe5e4",
+        "android_client_info": {
+          "package_name": "com.example.untitled5"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUTrS63xc_ATf57OFK98MsXjfqgJIwdWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
